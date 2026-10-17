@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Promociones especiales | PETs.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/stylesheet.css">
+    <script src="assets/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <p class="logo">Bienvenidos a <span id="letras">PET</span>s.com</p>
+        <nav>
+            <ul class="nav1">
+                <li><a class="header-links" href="pets.html">Inicio</a></li>
+                <li><a class="header-links" href="#">Blog de mascotas</a></li>
+                <li><a class="header-links" href="#">Contáctanos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="nosotros">💸 Promociones especiales 👌</h1>
+        <p class="subtitulo">Productos de calidad, al mejor precio.</p>
+    </main>
+
+    <section>
+        <h3 class="titulo3">Productos</h3>
+
+        <div class="products-grid">
+
+            <article class="product-card" data-id="1" data-name="Croquetas Premium Perro Adulto" data-price="24990">
+                <div class="product-card-image">🐕</div>
+                <div class="product-card-info">
+                    <span class="product-card-category">Alimento</span>
+                    <h3 class="product-card-name">Alimento Premium Perro Adulto</h3>
+                    <p class="product-card-description">15kg</p>
+                    <div class="product-card-footer">
+                        <span class="product-card-price">$24.990</span>
+                        <input class="product-quantity" type="number" value="1" min="1">
+                        <button class="boton-agregar">Agregar al carrito</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card" data-id="2" data-name="Salmón En Gel Para Gatos" data-price="3990">
+                <div class="product-card-image">🐈</div>
+                <div class="product-card-info">
+                    <span class="product-card-category">Alimento</span>
+                    <h3 class="product-card-name">Salmón En Gel Para Gatos</h3>
+                    <p class="product-card-description">300gr</p>
+                    <div class="product-card-footer">
+                        <span class="product-card-price">$3.990</span>
+                        <input class="product-quantity" type="number" value="1" min="1">
+                        <button class="boton-agregar">Agregar al carrito</button>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <section class="cart">
+        <h2>🛒 Mi carrito</h2>
+
+        <div id="cart-items">
+            <p>No hay productos en el carrito.</p>
+        </div>
+
+        <div class="cart-summary">
+            <p>Productos: <strong id="cart-count">0</strong></p>
+            <p>Total a pagar: <strong id="cart-total">0</strong></p>
+            <button id="clear-cart">Vaciar carrito</button>
+        </div>
+    </section>
+</body>
+
+</html>

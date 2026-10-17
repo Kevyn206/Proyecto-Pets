@@ -1,0 +1,522 @@
+/* El '*' funciona para modificar todos los objetos del sitio */
+* {
+    /* Paso 2: Reset global de márgenes y paddings */
+    margin: 0;
+    padding: 0;
+
+
+    /* Paso 3: Modificación del modelo de caja */
+
+    /* Ésta función hace que el tamaño total de la caja sea considerando el padding y el borde del objeto completo,
+    no solo el width o height del contenido (ancho y altura) */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background-color: #f0f4f8;
+}
+
+header {
+    color: #ffffff;
+    background-color: #2d6a4f;
+    padding: 1rem;
+    /* 1 rem = 16px (corresponde al tamaño de fuente configurao¿do en la etiqueta <html>*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 5px 15px #333;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.nav1 {
+    list-style: none;
+    display: flex;
+    /* Convierte los ítems en elementos flexibles */
+    gap: 1.5rem;
+    /* Espacio entre los ítems */
+}
+
+
+.header-links {
+    color: white;
+    background-color: rgb(0, 144, 89);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    /* primer parámetro: vertical. Segundo: horizontal */
+    border-radius: 6px;
+}
+
+.header-links:hover {
+    background-color: rgb(0, 203, 125);
+}
+
+
+main {
+    text-align: center;
+    color: white;
+    background: linear-gradient(135deg, #40916c, #74c69d);
+    padding: 1rem 1rem;
+}
+
+.nosotros {
+    font-size: 2.2rem;
+    padding: 0.5rem;
+}
+
+.subtitulo {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.promos {
+    display: block;
+    width: fit-content;
+    margin: 1.5rem auto;
+
+    color: #2d6a4f;
+    background-color: #f9c74f;
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    /* primer parámetro: vertical. Segundo: horizontal */
+    border-radius: 30px;
+
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease;
+    /* Primero el tipo de transición */
+}
+
+.promos:hover {
+    transform: translateY(-2px);
+    /* Sube 2 píxeles */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+    /* Se acentúa la sombra */
+}
+
+#letras {
+    color: rgb(0, 203, 125);
+}
+
+.info {
+    background-color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.titulo3 {
+    text-align: center;
+    font-size: 1.8rem;
+    padding: auto;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    color: #2d6a4f
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 1.5rem;
+}
+
+.product {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    /* Corta cualquier contenido que intente salirse de la tarjeta */
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.4);
+}
+
+.product-info {
+    padding: 0.8rem;
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-name {
+    font-size: 1.2rem;
+    color: #2d6a4f;
+    margin-bottom: 0.5rem;
+}
+
+.product-description {
+    font-size: 0.9rem;
+    color: #6c757d;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+.product-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.boton-ver {
+    background-color: #40916d;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.boton-ver:hover {
+    transform: translateY(-1px);
+    background-color: #2d6a4f;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 1.5rem;
+}
+
+.service {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    /* Corta cualquier contenido que intente salirse de la tarjeta */
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+.service-info {
+    padding: 0.5rem 1.2rem;
+}
+
+.service-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.service-name {
+    font-size: 1.15rem;
+    color: #2d6a4f;
+    margin-bottom: 0.5rem;
+}
+
+.service-description {
+    font-size: 0.9rem;
+    color: #6c757d;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+.ubication-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    max-width: 880px;
+    margin: 0 auto;
+    padding-bottom: 1.5rem;
+}
+
+.ubication {
+    background-color: #e3f4ed;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    /* Corta cualquier contenido que intente salirse de la tarjeta */
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ubication:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+.ubication-info {
+    padding: 0.5rem 1.2rem;
+}
+
+.metro-image {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+
+.ubication-name {
+    font-size: 1.25rem;
+    color: #2d6a4f;
+    margin-bottom: 0.5rem;
+}
+
+.ubication-description {
+    font-size: 0.9rem;
+    color: #6c757d;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    background-color: #1b4332;
+    color: white;
+    align-items: center;
+    padding: 2rem;
+    margin-top: 1rem;
+}
+
+.nav2 {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.footer-links {
+    color: #8ecfaf;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.footer-links:hover {
+    color: #f9c74f;
+}
+
+.footer-text {
+    font-size: 1rem;
+    color: white;
+    line-height: 1.4;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    text-align: center;
+    font-style: italic;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 1.5rem;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    /* Corta cualquier contenido que intente salirse de la tarjeta */
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.4);
+}
+
+.product-card-info {
+    padding: 0.8rem;
+}
+
+.product-card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-card-category{
+    background-color: #8ecfaf;
+    color: #1b4332;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    padding: 4px;
+}
+
+.product-card-name {
+    font-size: 1.2rem;
+    color: #2d6a4f;
+    margin-bottom: 0.5rem;
+}
+
+.product-card-description {
+    font-size: 0.9rem;
+    color: #6c757d;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+.product-card-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-card-price {
+    color: #d62828;
+    font-size: 1.3rem;
+}
+
+.boton-agregar {
+    background-color: white;
+    color: #40916c;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-color: #40916c;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.boton-agregar:hover {
+    transform: translateY(-1px);
+    background-color: #2d6a4f;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+
+
+/* ==========================================================================
+   MEDIA QUERIES (DISEÑO RESPONSIVO)
+   ========================================================================== */
+
+/* 1. TABLETS Y PANTALLAS MEDIANAS (hasta 768px) */
+@media (max-width: 768px) {
+
+    /* Header: apilamos el logo y la navegación centrada */
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .nav1 {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem;
+    }
+
+    /* Main (Hero) */
+    .nosotros {
+        font-size: 1.8rem;
+    }
+
+    .subtitulo {
+        font-size: 1rem;
+    }
+
+    /* Margen lateral para que las tarjetas no toquen los bordes */
+    .products-grid,
+    .services-grid,
+    .ubication-grid {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    /* Footer: permitir que los enlaces pasen a otra línea */
+    .nav2 {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+}
+
+/* 2. TELÉFONOS MÓVILES (hasta 480px) */
+@media (max-width: 480px) {
+
+    /* Header: botones de navegación verticales */
+    .nav1 {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+    }
+
+    .header-links {
+        display: block;
+        text-align: center;
+    }
+
+    /* Main */
+    main {
+        padding: 1.5rem 1rem;
+    }
+
+    .nosotros {
+        font-size: 1.5rem;
+    }
+
+    .promos {
+        width: 100%;
+        text-align: center;
+        padding: 0.8rem 1rem;
+    }
+
+    .info {
+        padding: 1.2rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    /* Forzar 1 sola columna en dispositivos pequeños */
+    .products-grid,
+    .services-grid,
+    .ubication-grid {
+        grid-template-columns: 1fr;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .product-image {
+        height: 180px;
+    }
+
+    .service-image {
+        height: 160px;
+    }
+
+    /* Footer en móviles */
+    footer {
+        padding: 1.5rem 1rem;
+    }
+
+    .nav2 {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    .footer-links {
+        display: block;
+        padding: 0.3rem 0;
+    }
+}
